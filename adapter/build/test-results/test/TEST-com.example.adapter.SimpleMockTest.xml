@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.adapter.SimpleMockTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-23T15:01:34" hostname="DESKTOP-JDBUIFM" time="3.129">
+  <properties/>
+  <testcase name="testFromDirectWeatherServiceToMockServiceB()" classname="com.example.adapter.SimpleMockTest" time="2.455"/>
+  <testcase name="testFromDirectServiceAToMockWeatherService()" classname="com.example.adapter.SimpleMockTest" time="0.288"/>
+  <testcase name="testFromDirectRestServiceAToMockServiceA()" classname="com.example.adapter.SimpleMockTest" time="0.383"/>
+  <system-out><![CDATA[18:01:34.286 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:34.296 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Testing: testFromDirectWeatherServiceToMockServiceB()(com.example.adapter.SimpleMockTest)
+18:01:34.296 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:34.297 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - setUp test
+18:01:34.387 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Setting up management with factory: org.apache.camel.management.JmxManagementStrategyFactory@e44d5c5
+18:01:34.452 [Camel Thread #0 - LRUCacheFactory] DEBUG org.apache.camel.component.caffeine.lrucache.CaffeineLRUCacheFactory - Warming up LRUCache ...
+18:01:34.518 [Camel Thread #0 - LRUCacheFactory] DEBUG org.apache.camel.component.caffeine.lrucache.CaffeineLRUCacheFactory - Warming up LRUCache complete in 66 millis
+18:01:34.538 [Test worker] DEBUG org.apache.camel.impl.engine.PropertiesComponentFactoryResolver - Found PropertiesComponent: org.apache.camel.component.properties.PropertiesComponent via: META-INF/services/org/apache/camel/properties-component-factory
+18:01:34.556 [Test worker] DEBUG org.apache.camel.impl.engine.PropertiesComponentFactoryResolver - Detected and using PropertiesComponent: org.apache.camel.component.properties.PropertiesComponent@7a2f6432
+18:01:34.589 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - Using created route builder: Routes: []
+18:01:34.589 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from builder: Routes: []
+18:01:35.021 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-1) is starting
+18:01:35.028 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ClassResolver=org.apache.camel.impl.engine.DefaultClassResolver@6378887d, PackageScanClassResolver=org.apache.camel.impl.engine.DefaultPackageScanClassResolver@35707999, ApplicationContextClassLoader=null, RouteController=org.apache.camel.impl.engine.DefaultRouteController@797a2903
+18:01:35.028 [Test worker] INFO org.apache.camel.management.JmxManagementStrategy - JMX is enabled
+18:01:35.321 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@6a615e7e
+18:01:35.643 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=context,name="camel-1"
+18:01:35.643 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@5f9bf380
+18:01:35.644 [Test worker] DEBUG org.apache.camel.management.JmxManagementLifecycleStrategy - Registering 5 pre registered services
+18:01:35.679 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultShutdownStrategy
+18:01:35.689 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=PropertiesComponent
+18:01:35.693 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultRouteController
+18:01:35.699 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultBeanIntrospection
+18:01:35.702 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=health,name="camel-1"
+18:01:35.704 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=routecontrollers,name="camel-1"
+18:01:35.727 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultTypeConverter
+18:01:35.738 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jackson/3.0.0/cd0a7996e4b735f77d933755024f94ae75f6af86/camel-jackson-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.741 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-spring/3.0.0/b878c8e2f9f8bdec21ff2607b87bdab00c7c20ce/camel-spring-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.742 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-http-common/3.0.0/c7096f39a452ef9b52a172f4ff931740da937f6/camel-http-common-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.744 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-file/3.0.0/6b809fc35a373b2431b4ae87be25a1e51d084fa3/camel-file-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.745 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-base/3.0.0/a1624a09a9db15d29a71fcaa0cacb6271cafaf49/camel-base-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.746 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jaxp/3.0.0/a34faa02e4911251ed82a3f7053db1513267de4e/camel-jaxp-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.747 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-attachments/3.0.0/d7330d531ad3ff91f77c349aeccca0a5b2b014dc/camel-attachments-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.748 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-support/3.0.0/4120bbd480d434989bbae67b37f5b84327a10e57/camel-support-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:35.750 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.component.jackson.converter.JacksonTypeConvertersLoader
+18:01:35.755 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.component.jackson.converter.JacksonTypeConvertersLoader loading converters
+18:01:35.757 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.spring.converter.ResourceConverterLoader
+18:01:35.759 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.spring.converter.ResourceConverterLoader loading converters
+18:01:35.761 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.http.common.HttpConverterLoader
+18:01:35.763 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.http.common.HttpConverterLoader loading converters
+18:01:35.777 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.component.file.GenericFileConverterLoader
+18:01:35.779 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.component.file.GenericFileConverterLoader loading converters
+18:01:35.784 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.CamelConverterLoader
+18:01:35.785 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.CamelConverterLoader loading converters
+18:01:35.787 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.CollectionConverterLoader
+18:01:35.789 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.CollectionConverterLoader loading converters
+18:01:35.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.DateTimeConverterLoader
+18:01:35.797 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.DateTimeConverterLoader loading converters
+18:01:35.800 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.DurationConverterLoader
+18:01:35.802 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.DurationConverterLoader loading converters
+18:01:35.804 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.IOConverterLoader
+18:01:35.806 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.IOConverterLoader loading converters
+18:01:35.825 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.NIOConverterLoader
+18:01:35.826 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.NIOConverterLoader loading converters
+18:01:35.832 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.ObjectConverterLoader
+18:01:35.834 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.ObjectConverterLoader loading converters
+18:01:35.845 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.SQLConverterLoader
+18:01:35.847 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.SQLConverterLoader loading converters
+18:01:35.849 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.TimePatternConverterLoader
+18:01:35.850 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.TimePatternConverterLoader loading converters
+18:01:35.851 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.impl.converter.UriTypeConverterLoader
+18:01:35.852 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.impl.converter.UriTypeConverterLoader loading converters
+18:01:35.854 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.DomConverterLoader
+18:01:35.856 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.DomConverterLoader loading converters
+18:01:35.860 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.StaxConverterLoader
+18:01:35.862 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.StaxConverterLoader loading converters
+18:01:35.872 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.StreamSourceConverterLoader
+18:01:35.874 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.StreamSourceConverterLoader loading converters
+18:01:35.876 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.XmlConverterLoader
+18:01:35.878 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.XmlConverterLoader loading converters
+18:01:35.915 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.util.xml.StreamSourceConverterLoader
+18:01:35.918 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.util.xml.StreamSourceConverterLoader loading converters
+18:01:35.922 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.attachment.AttachmentConverterLoader
+18:01:35.924 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.attachment.AttachmentConverterLoader loading converters
+18:01:35.930 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.stream.StreamCacheConverterLoader
+18:01:35.931 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.stream.StreamCacheConverterLoader loading converters
+18:01:35.937 [Test worker] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - No package names found to be used for classpath scanning for annotated type converters.
+18:01:35.954 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultExecutorServiceManager
+18:01:35.967 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultInflightRepository
+18:01:35.988 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultAsyncProcessorAwaitManager
+18:01:35.996 [Test worker] DEBUG org.apache.camel.impl.engine.RestRegistryFactoryResolver - Found RestRegistryFactory: org.apache.camel.component.rest.DefaultRestRegistryFactory via: META-INF/services/org/apache/camel/rest-registry-factory
+18:01:35.997 [Test worker] DEBUG org.apache.camel.impl.engine.RestRegistryFactoryResolver - Detected and using RestRegistryFactory: org.apache.camel.component.rest.DefaultRestRegistryFactory@753bff69
+18:01:36.005 [Test worker] DEBUG org.apache.camel.impl.engine.ReactiveExecutorResolver - Creating default ReactiveExecutor
+18:01:36.018 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultReactiveExecutor
+18:01:36.022 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Language with name simple in registry. Found: null
+18:01:36.022 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Language with name simple-language in registry. Found: null
+18:01:36.046 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultRuntimeCamelCatalog
+18:01:36.056 [Test worker] DEBUG org.apache.camel.impl.engine.BeanProxyFactoryResolver - Found BeanProxyFactory: org.apache.camel.component.bean.DefaultBeanProxyFactory via: META-INF/services/org/apache/camel/bean-proxy-factory
+18:01:36.057 [Test worker] DEBUG org.apache.camel.impl.engine.BeanProxyFactoryResolver - Detected and using BeanProxyFactory: org.apache.camel.component.bean.DefaultBeanProxyFactory@16d07ce6
+18:01:36.069 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultEndpointRegistry
+18:01:36.078 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultTransformerRegistry
+18:01:36.088 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultValidatorRegistry
+18:01:36.204 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.engine.DefaultComponentResolver@7584f957 to resolve component with name: direct
+18:01:36.205 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name direct in registry. Found: null
+18:01:36.206 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name direct-component in registry. Found: null
+18:01:36.211 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultComponentResolver - Found component: direct via type: org.apache.camel.component.direct.DirectComponent via: META-INF/services/org/apache/camel/component/direct
+18:01:36.223 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="direct"
+18:01:36.229 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Discovered component property configurer: direct -> org.apache.camel.component.direct.DirectComponentConfigurer@2e8e57a
+18:01:36.234 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Discovered endpoint property configurer: direct -> org.apache.camel.component.direct.DirectEndpointConfigurer@d7df284
+18:01:36.240 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://restServiceA], path=[restServiceA]
+18:01:36.253 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://restServiceA converted to endpoint: direct://restServiceA by component: org.apache.camel.component.direct.DirectComponent@14b9c897
+18:01:36.268 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="direct://restServiceA"
+18:01:36.283 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.engine.DefaultComponentResolver@7584f957 to resolve component with name: mock
+18:01:36.283 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name mock in registry. Found: null
+18:01:36.284 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name mock-component in registry. Found: null
+18:01:36.286 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultComponentResolver - Found component: mock via type: org.apache.camel.component.mock.MockComponent via: META-INF/services/org/apache/camel/component/mock
+18:01:36.288 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="mock"
+18:01:36.291 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Discovered component property configurer: mock -> org.apache.camel.component.mock.MockComponentConfigurer@455eff32
+18:01:36.294 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Discovered endpoint property configurer: mock -> org.apache.camel.component.mock.MockEndpointConfigurer@7061a153
+18:01:36.294 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://serviceA], path=[serviceA]
+18:01:36.303 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://serviceA converted to endpoint: mock://serviceA by component: org.apache.camel.component.mock.MockComponent@46665bff
+18:01:36.310 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="mock://serviceA"
+18:01:36.321 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:serviceA]'
+18:01:36.331 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultMessageHistoryFactory
+18:01:36.363 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+18:01:36.381 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://serviceA], path=[serviceA]
+18:01:36.382 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://serviceA converted to endpoint: direct://serviceA by component: org.apache.camel.component.direct.DirectComponent@14b9c897
+18:01:36.384 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="direct://serviceA"
+18:01:36.386 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://weatherService], path=[weatherService]
+18:01:36.388 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://weatherService converted to endpoint: mock://weatherService by component: org.apache.camel.component.mock.MockComponent@46665bff
+18:01:36.391 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="mock://weatherService"
+18:01:36.391 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:weatherService]'
+18:01:36.393 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://weatherService], path=[weatherService]
+18:01:36.393 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://weatherService converted to endpoint: direct://weatherService by component: org.apache.camel.component.direct.DirectComponent@14b9c897
+18:01:36.396 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="direct://weatherService"
+18:01:36.398 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://serviceB], path=[serviceB]
+18:01:36.398 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://serviceB converted to endpoint: mock://serviceB by component: org.apache.camel.component.mock.MockComponent@46665bff
+18:01:36.401 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="mock://serviceB"
+18:01:36.402 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:serviceB]'
+18:01:36.403 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+18:01:36.407 [Test worker] DEBUG org.apache.camel.impl.engine.HeadersMapFactoryResolver - Creating default HeadersMapFactory
+18:01:36.408 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using HeadersMapFactory: org.apache.camel.impl.engine.DefaultHeadersMapFactory@7ac976dc
+18:01:36.408 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ReactiveExecutor: org.apache.camel.impl.engine.DefaultReactiveExecutor@705b5408
+18:01:36.411 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route1 having autoStartup=true
+18:01:36.412 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route1
+18:01:36.417 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.427 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=producers,name=Producer(0x4b7af58)
+18:01:36.427 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://serviceA]
+18:01:36.429 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.429 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> sendTo(mock://serviceA)
+18:01:36.484 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to1"
+18:01:36.485 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route1 -> Channel[sendTo(mock://serviceA)]
+18:01:36.501 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route1"
+18:01:36.502 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@17ed3f6a
+18:01:36.502 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route2 having autoStartup=true
+18:01:36.502 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route2
+18:01:36.502 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route2 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.505 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=producers,name=Producer(0x740c7e33)
+18:01:36.505 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://weatherService]
+18:01:36.505 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route2 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.505 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route2 -> sendTo(mock://weatherService)
+18:01:36.509 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to2"
+18:01:36.509 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route2 -> Channel[sendTo(mock://weatherService)]
+18:01:36.514 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route2"
+18:01:36.514 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@7ad611b0
+18:01:36.514 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route3 having autoStartup=true
+18:01:36.514 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route3
+18:01:36.515 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route3 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.518 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=producers,name=Producer(0x722fc156)
+18:01:36.518 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://serviceB]
+18:01:36.518 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route3 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.518 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route3 -> sendTo(mock://serviceB)
+18:01:36.522 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to3"
+18:01:36.522 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route3 -> Channel[sendTo(mock://serviceB)]
+18:01:36.526 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route3"
+18:01:36.526 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@745e9c2d
+18:01:36.527 [Test worker] DEBUG org.apache.camel.management.JmxManagementLifecycleStrategy - Load performance statistics disabled
+18:01:36.528 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route1 >>> EventDrivenConsumerRoute[direct://restServiceA -> Pipeline[[Channel[sendTo(mock://serviceA)]]]]
+18:01:36.528 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1000) on route: route1
+18:01:36.534 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=DirectConsumer(0x5b08a814)
+18:01:36.535 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://restServiceA]
+18:01:36.535 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://restServiceA]
+18:01:36.535 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route1 started and consuming from: direct://restServiceA
+18:01:36.539 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route2 >>> EventDrivenConsumerRoute[direct://serviceA -> Pipeline[[Channel[sendTo(mock://weatherService)]]]]
+18:01:36.539 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1001) on route: route2
+18:01:36.541 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=DirectConsumer(0x4356b80)
+18:01:36.541 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://serviceA]
+18:01:36.541 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://serviceA]
+18:01:36.542 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route2 started and consuming from: direct://serviceA
+18:01:36.542 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route3 >>> EventDrivenConsumerRoute[direct://weatherService -> Pipeline[[Channel[sendTo(mock://serviceB)]]]]
+18:01:36.542 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1002) on route: route3
+18:01:36.544 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=DirectConsumer(0x7f5f8587)
+18:01:36.544 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://weatherService]
+18:01:36.545 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://weatherService]
+18:01:36.545 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route3 started and consuming from: direct://weatherService
+18:01:36.546 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Clearing BeanIntrospection cache with 65 objects using during starting Camel
+18:01:36.547 [Test worker] DEBUG org.apache.camel.support.IntrospectionSupport - Clearing cache[size=65, hits=93, misses=65, evicted=0]
+18:01:36.555 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Total 3 routes, of which 3 are started
+18:01:36.561 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-1) started in 1.536 seconds
+18:01:36.563 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - Routing Rules are: [EventDrivenConsumerRoute[direct://restServiceA -> Pipeline[[Channel[sendTo(mock://serviceA)]]]], EventDrivenConsumerRoute[direct://serviceA -> Pipeline[[Channel[sendTo(mock://weatherService)]]]], EventDrivenConsumerRoute[direct://weatherService -> Pipeline[[Channel[sendTo(mock://serviceB)]]]]]
+18:01:36.579 [Test worker] DEBUG org.apache.camel.component.direct.DirectProducer - Starting producer: Producer[direct://weatherService]
+18:01:36.581 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultProducerCache - >>>> direct://weatherService Exchange[]
+18:01:36.607 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Step[ID-DESKTOP-JDBUIFM-1627052496590-0-1,DefaultErrorHandler[sendTo(mock://serviceB)]]
+18:01:36.609 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: CamelInternalProcessor - UnitOfWork - afterProcess - DefaultErrorHandler[sendTo(mock://serviceB)] - ID-DESKTOP-JDBUIFM-1627052496590-0-1
+18:01:36.611 [Test worker] DEBUG org.apache.camel.processor.SendProcessor - >>>> mock://serviceB Exchange[ID-DESKTOP-JDBUIFM-1627052496590-0-1]
+18:01:36.614 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint - mock://serviceB >>>> 0 : Exchange[ID-DESKTOP-JDBUIFM-1627052496590-0-1] with body: {
+    "txt": "Привет",
+    "createdDt": "2020-06-10T10:15:30Z",
+    "currentTemp": "28"
+}
+18:01:36.615 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint - Running assertOnIndex(0) on task: org.apache.camel.component.mock.MockEndpoint$6@35d50ad1
+18:01:36.617 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.CamelInternalProcessor$$Lambda$887/0x0000000800eee170@45fb75a5]
+18:01:36.618 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.Pipeline$$Lambda$889/0x0000000800eef0c8@7aa48fe4]
+18:01:36.619 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Step[ID-DESKTOP-JDBUIFM-1627052496590-0-1,Pipeline[[Channel[sendTo(mock://serviceB)]]]]
+18:01:36.620 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.CamelInternalProcessor$$Lambda$887/0x0000000800eee170@4bf9db76]
+18:01:36.620 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.SharedCamelInternalProcessor$InternalCallback@475c9a80]
+18:01:36.622 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager$$Lambda$884/0x0000000800eece60@378a9b64]
+18:01:36.628 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://serviceA is satisfied
+18:01:36.628 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://weatherService is satisfied
+18:01:36.628 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://serviceB is satisfied
+18:01:36.632 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:36.632 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Testing done: testFromDirectWeatherServiceToMockServiceB()(com.example.adapter.SimpleMockTest)
+18:01:36.633 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Took: 0.067 seconds (67 millis)
+18:01:36.633 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:36.633 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - tearDown()
+18:01:36.634 [Test worker] DEBUG org.apache.camel.component.direct.DirectProducer - Stopping producer: Producer[direct://weatherService]
+18:01:36.635 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-1) is shutting down
+18:01:36.639 [Test worker] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 10 seconds)
+18:01:36.642 [Test worker] DEBUG org.apache.camel.impl.engine.BaseExecutorServiceManager - Created new ThreadPool for source: org.apache.camel.impl.engine.DefaultShutdownStrategy@7eebc25d with name: ShutdownTask. -> org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@2635f236[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0][ShutdownTask]
+18:01:36.647 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - There are 3 routes to shutdown
+18:01:36.649 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route3 suspension deferred.
+18:01:36.649 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route2 suspension deferred.
+18:01:36.649 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route1 suspension deferred.
+18:01:36.649 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route3 preparing to shutdown complete.
+18:01:36.650 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route2 preparing to shutdown complete.
+18:01:36.651 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route1 preparing to shutdown complete.
+18:01:36.652 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://weatherService]
+18:01:36.653 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://serviceB]
+18:01:36.655 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=producers,name=Producer(0x722fc156)
+18:01:36.655 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route3 shutdown complete, was consuming from: direct://weatherService
+18:01:36.656 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://serviceA]
+18:01:36.657 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://weatherService]
+18:01:36.657 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=producers,name=Producer(0x740c7e33)
+18:01:36.658 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route2 shutdown complete, was consuming from: direct://serviceA
+18:01:36.658 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://restServiceA]
+18:01:36.658 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://serviceA]
+18:01:36.659 [Camel (camel-1) thread #1 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=producers,name=Producer(0x4b7af58)
+18:01:36.659 [Camel (camel-1) thread #1 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: direct://restServiceA
+18:01:36.660 [Test worker] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+18:01:36.661 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager - Shutting down with no inflight threads.
+18:01:36.662 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@745e9c2d
+18:01:36.663 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route3"
+18:01:36.663 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route3
+18:01:36.663 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route3 -> Consumer[direct://weatherService]
+18:01:36.663 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=DirectConsumer(0x7f5f8587)
+18:01:36.664 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route3 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.664 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route3 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.664 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route3 -> sendTo(mock://serviceB)
+18:01:36.664 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route3 -> Channel[sendTo(mock://serviceB)]
+18:01:36.666 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route3
+18:01:36.669 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@7ad611b0
+18:01:36.669 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route2"
+18:01:36.670 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route2
+18:01:36.670 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route2 -> Consumer[direct://serviceA]
+18:01:36.671 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=DirectConsumer(0x4356b80)
+18:01:36.671 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route2 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.671 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route2 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.671 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route2 -> sendTo(mock://weatherService)
+18:01:36.671 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route2 -> Channel[sendTo(mock://weatherService)]
+18:01:36.672 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route2
+18:01:36.673 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@17ed3f6a
+18:01:36.673 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=routes,name="route1"
+18:01:36.673 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route1
+18:01:36.673 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Consumer[direct://restServiceA]
+18:01:36.673 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=consumers,name=DirectConsumer(0x5b08a814)
+18:01:36.674 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.674 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.674 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> sendTo(mock://serviceA)
+18:01:36.674 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route1 -> Channel[sendTo(mock://serviceA)]
+18:01:36.674 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route1
+18:01:36.676 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=routecontrollers,name="camel-1"
+18:01:36.677 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=health,name="camel-1"
+18:01:36.677 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@75bbc023
+18:01:36.678 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=context,name="camel-1"
+18:01:36.680 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultInflightRepository - Shutting down with no inflight exchanges.
+18:01:36.682 [Test worker] DEBUG org.apache.camel.support.IntrospectionSupport - Clearing cache[size=0, hits=0, misses=0, evicted=0]
+18:01:36.682 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultBeanIntrospection - BeanIntrospection invoked: 158 times
+18:01:36.683 [Test worker] DEBUG org.apache.camel.impl.engine.BaseExecutorServiceManager - Forcing shutdown of ExecutorService: org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@2635f236[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1][ShutdownTask]
+18:01:36.686 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to3"
+18:01:36.686 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultBeanIntrospection
+18:01:36.686 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultEndpointRegistry
+18:01:36.687 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="direct://restServiceA"
+18:01:36.687 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to2"
+18:01:36.688 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultRuntimeCamelCatalog
+18:01:36.688 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultValidatorRegistry
+18:01:36.689 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultInflightRepository
+18:01:36.689 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultTypeConverter
+18:01:36.689 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultMessageHistoryFactory
+18:01:36.690 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultExecutorServiceManager
+18:01:36.690 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+18:01:36.690 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="mock://serviceA"
+18:01:36.691 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="direct://weatherService"
+18:01:36.691 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=processors,name="to1"
+18:01:36.691 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultRouteController
+18:01:36.692 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="direct://serviceA"
+18:01:36.692 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultReactiveExecutor
+18:01:36.693 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultTransformerRegistry
+18:01:36.693 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="mock://weatherService"
+18:01:36.693 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultAsyncProcessorAwaitManager
+18:01:36.694 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=endpoints,name="mock://serviceB"
+18:01:36.694 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=DefaultShutdownStrategy
+18:01:36.694 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=services,name=PropertiesComponent
+18:01:36.694 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="direct"
+18:01:36.695 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-1,type=components,name="mock"
+18:01:36.695 [Test worker] DEBUG org.apache.camel.support.management.MBeanInfoAssembler - Clearing cache[size=23, hits=21, misses=23, evicted=0]
+18:01:36.697 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-1) uptime 1.677 seconds
+18:01:36.697 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-1) is shutdown in 0.062 seconds
+18:01:36.715 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:36.715 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Testing: testFromDirectServiceAToMockWeatherService()(com.example.adapter.SimpleMockTest)
+18:01:36.715 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:36.715 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - setUp test
+18:01:36.717 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Setting up management with factory: org.apache.camel.management.JmxManagementStrategyFactory@39861e06
+18:01:36.719 [Test worker] DEBUG org.apache.camel.impl.engine.PropertiesComponentFactoryResolver - Found PropertiesComponent: org.apache.camel.component.properties.PropertiesComponent via: META-INF/services/org/apache/camel/properties-component-factory
+18:01:36.721 [Test worker] DEBUG org.apache.camel.impl.engine.PropertiesComponentFactoryResolver - Detected and using PropertiesComponent: org.apache.camel.component.properties.PropertiesComponent@3293bee5
+18:01:36.723 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - Using created route builder: Routes: []
+18:01:36.724 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from builder: Routes: []
+18:01:36.725 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-2) is starting
+18:01:36.728 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ClassResolver=org.apache.camel.impl.engine.DefaultClassResolver@14982bec, PackageScanClassResolver=org.apache.camel.impl.engine.DefaultPackageScanClassResolver@7ff65f36, ApplicationContextClassLoader=null, RouteController=org.apache.camel.impl.engine.DefaultRouteController@6ffded90
+18:01:36.728 [Test worker] INFO org.apache.camel.management.JmxManagementStrategy - JMX is enabled
+18:01:36.729 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@6a615e7e
+18:01:36.737 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=context,name="camel-2"
+18:01:36.737 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@6e80df15
+18:01:36.737 [Test worker] DEBUG org.apache.camel.management.JmxManagementLifecycleStrategy - Registering 5 pre registered services
+18:01:36.739 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultShutdownStrategy
+18:01:36.743 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=PropertiesComponent
+18:01:36.745 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultRouteController
+18:01:36.748 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultBeanIntrospection
+18:01:36.751 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=health,name="camel-2"
+18:01:36.753 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=routecontrollers,name="camel-2"
+18:01:36.756 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultTypeConverter
+18:01:36.757 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jackson/3.0.0/cd0a7996e4b735f77d933755024f94ae75f6af86/camel-jackson-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.758 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-spring/3.0.0/b878c8e2f9f8bdec21ff2607b87bdab00c7c20ce/camel-spring-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.758 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-http-common/3.0.0/c7096f39a452ef9b52a172f4ff931740da937f6/camel-http-common-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.759 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-file/3.0.0/6b809fc35a373b2431b4ae87be25a1e51d084fa3/camel-file-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.760 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-base/3.0.0/a1624a09a9db15d29a71fcaa0cacb6271cafaf49/camel-base-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.762 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jaxp/3.0.0/a34faa02e4911251ed82a3f7053db1513267de4e/camel-jaxp-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.764 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-attachments/3.0.0/d7330d531ad3ff91f77c349aeccca0a5b2b014dc/camel-attachments-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.769 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-support/3.0.0/4120bbd480d434989bbae67b37f5b84327a10e57/camel-support-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:36.772 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.component.jackson.converter.JacksonTypeConvertersLoader
+18:01:36.773 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.component.jackson.converter.JacksonTypeConvertersLoader loading converters
+18:01:36.774 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.spring.converter.ResourceConverterLoader
+18:01:36.776 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.spring.converter.ResourceConverterLoader loading converters
+18:01:36.777 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.http.common.HttpConverterLoader
+18:01:36.778 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.http.common.HttpConverterLoader loading converters
+18:01:36.779 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.component.file.GenericFileConverterLoader
+18:01:36.780 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.component.file.GenericFileConverterLoader loading converters
+18:01:36.782 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.CamelConverterLoader
+18:01:36.782 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.CamelConverterLoader loading converters
+18:01:36.783 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.CollectionConverterLoader
+18:01:36.783 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.CollectionConverterLoader loading converters
+18:01:36.785 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.DateTimeConverterLoader
+18:01:36.786 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.DateTimeConverterLoader loading converters
+18:01:36.787 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.DurationConverterLoader
+18:01:36.787 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.DurationConverterLoader loading converters
+18:01:36.790 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.IOConverterLoader
+18:01:36.791 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.IOConverterLoader loading converters
+18:01:36.792 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.NIOConverterLoader
+18:01:36.792 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.NIOConverterLoader loading converters
+18:01:36.794 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.ObjectConverterLoader
+18:01:36.795 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.ObjectConverterLoader loading converters
+18:01:36.795 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.SQLConverterLoader
+18:01:36.795 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.SQLConverterLoader loading converters
+18:01:36.795 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.TimePatternConverterLoader
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.TimePatternConverterLoader loading converters
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.impl.converter.UriTypeConverterLoader
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.impl.converter.UriTypeConverterLoader loading converters
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.DomConverterLoader
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.DomConverterLoader loading converters
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.StaxConverterLoader
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.StaxConverterLoader loading converters
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.StreamSourceConverterLoader
+18:01:36.796 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.StreamSourceConverterLoader loading converters
+18:01:36.797 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.XmlConverterLoader
+18:01:36.797 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.XmlConverterLoader loading converters
+18:01:36.797 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.util.xml.StreamSourceConverterLoader
+18:01:36.798 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.util.xml.StreamSourceConverterLoader loading converters
+18:01:36.798 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.attachment.AttachmentConverterLoader
+18:01:36.799 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.attachment.AttachmentConverterLoader loading converters
+18:01:36.799 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.stream.StreamCacheConverterLoader
+18:01:36.799 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.stream.StreamCacheConverterLoader loading converters
+18:01:36.800 [Test worker] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - No package names found to be used for classpath scanning for annotated type converters.
+18:01:36.808 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultExecutorServiceManager
+18:01:36.814 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultInflightRepository
+18:01:36.833 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultAsyncProcessorAwaitManager
+18:01:36.835 [Test worker] DEBUG org.apache.camel.impl.engine.RestRegistryFactoryResolver - Found RestRegistryFactory: org.apache.camel.component.rest.DefaultRestRegistryFactory via: META-INF/services/org/apache/camel/rest-registry-factory
+18:01:36.837 [Test worker] DEBUG org.apache.camel.impl.engine.RestRegistryFactoryResolver - Detected and using RestRegistryFactory: org.apache.camel.component.rest.DefaultRestRegistryFactory@1102997f
+18:01:36.841 [Test worker] DEBUG org.apache.camel.impl.engine.ReactiveExecutorResolver - Creating default ReactiveExecutor
+18:01:36.846 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultReactiveExecutor
+18:01:36.846 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Language with name simple in registry. Found: null
+18:01:36.846 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Language with name simple-language in registry. Found: null
+18:01:36.850 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultRuntimeCamelCatalog
+18:01:36.853 [Test worker] DEBUG org.apache.camel.impl.engine.BeanProxyFactoryResolver - Found BeanProxyFactory: org.apache.camel.component.bean.DefaultBeanProxyFactory via: META-INF/services/org/apache/camel/bean-proxy-factory
+18:01:36.853 [Test worker] DEBUG org.apache.camel.impl.engine.BeanProxyFactoryResolver - Detected and using BeanProxyFactory: org.apache.camel.component.bean.DefaultBeanProxyFactory@63450569
+18:01:36.858 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultEndpointRegistry
+18:01:36.862 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultTransformerRegistry
+18:01:36.864 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultValidatorRegistry
+18:01:36.865 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.engine.DefaultComponentResolver@a9c13b5 to resolve component with name: direct
+18:01:36.865 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name direct in registry. Found: null
+18:01:36.865 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name direct-component in registry. Found: null
+18:01:36.866 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultComponentResolver - Found component: direct via type: org.apache.camel.component.direct.DirectComponent via: META-INF/services/org/apache/camel/component/direct
+18:01:36.868 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=components,name="direct"
+18:01:36.870 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Discovered component property configurer: direct -> org.apache.camel.component.direct.DirectComponentConfigurer@1c0f1c35
+18:01:36.872 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Discovered endpoint property configurer: direct -> org.apache.camel.component.direct.DirectEndpointConfigurer@1f84713d
+18:01:36.874 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://restServiceA], path=[restServiceA]
+18:01:36.875 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://restServiceA converted to endpoint: direct://restServiceA by component: org.apache.camel.component.direct.DirectComponent@7b8e284c
+18:01:36.877 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="direct://restServiceA"
+18:01:36.879 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.engine.DefaultComponentResolver@a9c13b5 to resolve component with name: mock
+18:01:36.879 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name mock in registry. Found: null
+18:01:36.880 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name mock-component in registry. Found: null
+18:01:36.882 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultComponentResolver - Found component: mock via type: org.apache.camel.component.mock.MockComponent via: META-INF/services/org/apache/camel/component/mock
+18:01:36.883 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=components,name="mock"
+18:01:36.885 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Discovered component property configurer: mock -> org.apache.camel.component.mock.MockComponentConfigurer@5c219755
+18:01:36.888 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Discovered endpoint property configurer: mock -> org.apache.camel.component.mock.MockEndpointConfigurer@5bf5cd5f
+18:01:36.888 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://serviceA], path=[serviceA]
+18:01:36.889 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://serviceA converted to endpoint: mock://serviceA by component: org.apache.camel.component.mock.MockComponent@bbe724b
+18:01:36.891 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="mock://serviceA"
+18:01:36.892 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:serviceA]'
+18:01:36.896 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultMessageHistoryFactory
+18:01:36.901 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+18:01:36.902 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://serviceA], path=[serviceA]
+18:01:36.902 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://serviceA converted to endpoint: direct://serviceA by component: org.apache.camel.component.direct.DirectComponent@7b8e284c
+18:01:36.904 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="direct://serviceA"
+18:01:36.907 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://weatherService], path=[weatherService]
+18:01:36.907 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://weatherService converted to endpoint: mock://weatherService by component: org.apache.camel.component.mock.MockComponent@bbe724b
+18:01:36.909 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="mock://weatherService"
+18:01:36.910 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:weatherService]'
+18:01:36.911 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://weatherService], path=[weatherService]
+18:01:36.911 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://weatherService converted to endpoint: direct://weatherService by component: org.apache.camel.component.direct.DirectComponent@7b8e284c
+18:01:36.913 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="direct://weatherService"
+18:01:36.915 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://serviceB], path=[serviceB]
+18:01:36.916 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://serviceB converted to endpoint: mock://serviceB by component: org.apache.camel.component.mock.MockComponent@bbe724b
+18:01:36.917 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="mock://serviceB"
+18:01:36.918 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:serviceB]'
+18:01:36.918 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+18:01:36.920 [Test worker] DEBUG org.apache.camel.impl.engine.HeadersMapFactoryResolver - Creating default HeadersMapFactory
+18:01:36.920 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using HeadersMapFactory: org.apache.camel.impl.engine.DefaultHeadersMapFactory@62004e9
+18:01:36.920 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ReactiveExecutor: org.apache.camel.impl.engine.DefaultReactiveExecutor@25738435
+18:01:36.920 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route4 having autoStartup=true
+18:01:36.920 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route4
+18:01:36.921 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route4 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.923 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=producers,name=Producer(0x512c38d1)
+18:01:36.924 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://serviceA]
+18:01:36.924 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route4 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.924 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route4 -> sendTo(mock://serviceA)
+18:01:36.928 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=processors,name="to4"
+18:01:36.928 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route4 -> Channel[sendTo(mock://serviceA)]
+18:01:36.933 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=routes,name="route4"
+18:01:36.933 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@1d5b9673
+18:01:36.933 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route5 having autoStartup=true
+18:01:36.933 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route5
+18:01:36.933 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route5 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.936 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=producers,name=Producer(0x10999eb4)
+18:01:36.937 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://weatherService]
+18:01:36.937 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route5 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.937 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route5 -> sendTo(mock://weatherService)
+18:01:36.940 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=processors,name="to5"
+18:01:36.940 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route5 -> Channel[sendTo(mock://weatherService)]
+18:01:36.944 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=routes,name="route5"
+18:01:36.945 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@3c48943
+18:01:36.945 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route6 having autoStartup=true
+18:01:36.945 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route6
+18:01:36.945 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route6 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.946 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=producers,name=Producer(0x18d0a801)
+18:01:36.947 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://serviceB]
+18:01:36.947 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route6 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.947 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route6 -> sendTo(mock://serviceB)
+18:01:36.960 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=processors,name="to6"
+18:01:36.960 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route6 -> Channel[sendTo(mock://serviceB)]
+18:01:36.963 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=routes,name="route6"
+18:01:36.963 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@1b57484e
+18:01:36.963 [Test worker] DEBUG org.apache.camel.management.JmxManagementLifecycleStrategy - Load performance statistics disabled
+18:01:36.964 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route4 >>> EventDrivenConsumerRoute[direct://restServiceA -> Pipeline[[Channel[sendTo(mock://serviceA)]]]]
+18:01:36.964 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1000) on route: route4
+18:01:36.967 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=consumers,name=DirectConsumer(0x4923f33)
+18:01:36.968 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://restServiceA]
+18:01:36.968 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://restServiceA]
+18:01:36.968 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route4 started and consuming from: direct://restServiceA
+18:01:36.969 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route5 >>> EventDrivenConsumerRoute[direct://serviceA -> Pipeline[[Channel[sendTo(mock://weatherService)]]]]
+18:01:36.969 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1001) on route: route5
+18:01:36.970 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=consumers,name=DirectConsumer(0x71c16cda)
+18:01:36.970 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://serviceA]
+18:01:36.970 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://serviceA]
+18:01:36.970 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route5 started and consuming from: direct://serviceA
+18:01:36.971 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route6 >>> EventDrivenConsumerRoute[direct://weatherService -> Pipeline[[Channel[sendTo(mock://serviceB)]]]]
+18:01:36.971 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1002) on route: route6
+18:01:36.972 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-2,type=consumers,name=DirectConsumer(0x41fab3c6)
+18:01:36.972 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://weatherService]
+18:01:36.972 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://weatherService]
+18:01:36.972 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route6 started and consuming from: direct://weatherService
+18:01:36.973 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Clearing BeanIntrospection cache with 65 objects using during starting Camel
+18:01:36.973 [Test worker] DEBUG org.apache.camel.support.IntrospectionSupport - Clearing cache[size=65, hits=93, misses=65, evicted=0]
+18:01:36.974 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Total 3 routes, of which 3 are started
+18:01:36.974 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-2) started in 0.249 seconds
+18:01:36.974 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - Routing Rules are: [EventDrivenConsumerRoute[direct://restServiceA -> Pipeline[[Channel[sendTo(mock://serviceA)]]]], EventDrivenConsumerRoute[direct://serviceA -> Pipeline[[Channel[sendTo(mock://weatherService)]]]], EventDrivenConsumerRoute[direct://weatherService -> Pipeline[[Channel[sendTo(mock://serviceB)]]]]]
+18:01:36.975 [Test worker] DEBUG org.apache.camel.component.direct.DirectProducer - Starting producer: Producer[direct://serviceA]
+18:01:36.975 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultProducerCache - >>>> direct://serviceA Exchange[]
+18:01:36.976 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Step[ID-DESKTOP-JDBUIFM-1627052496590-1-1,DefaultErrorHandler[sendTo(mock://weatherService)]]
+18:01:36.976 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: CamelInternalProcessor - UnitOfWork - afterProcess - DefaultErrorHandler[sendTo(mock://weatherService)] - ID-DESKTOP-JDBUIFM-1627052496590-1-1
+18:01:36.976 [Test worker] DEBUG org.apache.camel.processor.SendProcessor - >>>> mock://weatherService Exchange[ID-DESKTOP-JDBUIFM-1627052496590-1-1]
+18:01:36.977 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint - mock://weatherService >>>> 0 : Exchange[ID-DESKTOP-JDBUIFM-1627052496590-1-1] with body: {
+    "coordinates": {
+        "latitude": "54.35",
+        "longitude": "52.52"
+    }
+}
+18:01:36.978 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint - Running assertOnIndex(0) on task: org.apache.camel.component.mock.MockEndpoint$6@119209ba
+18:01:36.978 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.CamelInternalProcessor$$Lambda$887/0x0000000800eee170@167f1bf3]
+18:01:36.978 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.Pipeline$$Lambda$889/0x0000000800eef0c8@4b8460ef]
+18:01:36.978 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Step[ID-DESKTOP-JDBUIFM-1627052496590-1-1,Pipeline[[Channel[sendTo(mock://weatherService)]]]]
+18:01:36.978 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.CamelInternalProcessor$$Lambda$887/0x0000000800eee170@549654e6]
+18:01:36.978 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.SharedCamelInternalProcessor$InternalCallback@55485817]
+18:01:36.978 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager$$Lambda$884/0x0000000800eece60@3b0671ce]
+18:01:36.979 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://serviceA is satisfied
+18:01:36.979 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://weatherService is satisfied
+18:01:36.979 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://serviceB is satisfied
+18:01:36.979 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:36.979 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Testing done: testFromDirectServiceAToMockWeatherService()(com.example.adapter.SimpleMockTest)
+18:01:36.980 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Took: 0.005 seconds (5 millis)
+18:01:36.980 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:36.980 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - tearDown()
+18:01:36.980 [Test worker] DEBUG org.apache.camel.component.direct.DirectProducer - Stopping producer: Producer[direct://serviceA]
+18:01:36.980 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-2) is shutting down
+18:01:36.981 [Test worker] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 10 seconds)
+18:01:36.981 [Test worker] DEBUG org.apache.camel.impl.engine.BaseExecutorServiceManager - Created new ThreadPool for source: org.apache.camel.impl.engine.DefaultShutdownStrategy@353ab2a6 with name: ShutdownTask. -> org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@53edfd59[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0][ShutdownTask]
+18:01:36.983 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - There are 3 routes to shutdown
+18:01:36.983 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route6 suspension deferred.
+18:01:36.983 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route5 suspension deferred.
+18:01:36.983 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route4 suspension deferred.
+18:01:36.983 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route6 preparing to shutdown complete.
+18:01:36.984 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route5 preparing to shutdown complete.
+18:01:36.984 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route4 preparing to shutdown complete.
+18:01:36.984 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://weatherService]
+18:01:36.984 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://serviceB]
+18:01:36.985 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=producers,name=Producer(0x18d0a801)
+18:01:36.985 [Camel (camel-2) thread #2 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route6 shutdown complete, was consuming from: direct://weatherService
+18:01:36.985 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://serviceA]
+18:01:36.985 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://weatherService]
+18:01:36.986 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=producers,name=Producer(0x10999eb4)
+18:01:36.986 [Camel (camel-2) thread #2 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route5 shutdown complete, was consuming from: direct://serviceA
+18:01:36.987 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://restServiceA]
+18:01:36.987 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://serviceA]
+18:01:36.988 [Camel (camel-2) thread #2 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=producers,name=Producer(0x512c38d1)
+18:01:36.988 [Camel (camel-2) thread #2 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route4 shutdown complete, was consuming from: direct://restServiceA
+18:01:36.989 [Test worker] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+18:01:36.989 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager - Shutting down with no inflight threads.
+18:01:36.990 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@1b57484e
+18:01:36.990 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=routes,name="route6"
+18:01:36.990 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route6
+18:01:36.990 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route6 -> Consumer[direct://weatherService]
+18:01:36.990 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=consumers,name=DirectConsumer(0x41fab3c6)
+18:01:36.990 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route6 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.991 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route6 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:36.991 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route6 -> sendTo(mock://serviceB)
+18:01:36.991 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route6 -> Channel[sendTo(mock://serviceB)]
+18:01:36.991 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route6
+18:01:36.991 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@3c48943
+18:01:36.991 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=routes,name="route5"
+18:01:36.991 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route5
+18:01:36.991 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route5 -> Consumer[direct://serviceA]
+18:01:36.992 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=consumers,name=DirectConsumer(0x71c16cda)
+18:01:36.992 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route5 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.992 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route5 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:36.992 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route5 -> sendTo(mock://weatherService)
+18:01:36.992 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route5 -> Channel[sendTo(mock://weatherService)]
+18:01:36.992 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route5
+18:01:36.992 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@1d5b9673
+18:01:36.993 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=routes,name="route4"
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route4
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route4 -> Consumer[direct://restServiceA]
+18:01:36.993 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=consumers,name=DirectConsumer(0x4923f33)
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route4 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route4 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route4 -> sendTo(mock://serviceA)
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route4 -> Channel[sendTo(mock://serviceA)]
+18:01:36.993 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route4
+18:01:36.994 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=routecontrollers,name="camel-2"
+18:01:36.995 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=health,name="camel-2"
+18:01:36.995 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@2aa5516d
+18:01:36.995 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=context,name="camel-2"
+18:01:36.995 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultInflightRepository - Shutting down with no inflight exchanges.
+18:01:36.995 [Test worker] DEBUG org.apache.camel.support.IntrospectionSupport - Clearing cache[size=0, hits=0, misses=0, evicted=0]
+18:01:36.995 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultBeanIntrospection - BeanIntrospection invoked: 158 times
+18:01:36.996 [Test worker] DEBUG org.apache.camel.impl.engine.BaseExecutorServiceManager - Forcing shutdown of ExecutorService: org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@53edfd59[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1][ShutdownTask]
+18:01:36.996 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+18:01:36.997 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultShutdownStrategy
+18:01:36.997 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultMessageHistoryFactory
+18:01:36.997 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="mock://weatherService"
+18:01:36.997 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultExecutorServiceManager
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=components,name="direct"
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultRuntimeCamelCatalog
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=processors,name="to6"
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultEndpointRegistry
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultRouteController
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultReactiveExecutor
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=components,name="mock"
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="direct://weatherService"
+18:01:36.998 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultBeanIntrospection
+18:01:36.999 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=processors,name="to5"
+18:01:36.999 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultTransformerRegistry
+18:01:36.999 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="direct://restServiceA"
+18:01:36.999 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="mock://serviceA"
+18:01:36.999 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultAsyncProcessorAwaitManager
+18:01:36.999 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultValidatorRegistry
+18:01:37.000 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultTypeConverter
+18:01:37.000 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="mock://serviceB"
+18:01:37.000 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=endpoints,name="direct://serviceA"
+18:01:37.000 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=processors,name="to4"
+18:01:37.000 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=DefaultInflightRepository
+18:01:37.000 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-2,type=services,name=PropertiesComponent
+18:01:37.000 [Test worker] DEBUG org.apache.camel.support.management.MBeanInfoAssembler - Clearing cache[size=23, hits=21, misses=23, evicted=0]
+18:01:37.001 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-2) uptime 0.276 seconds
+18:01:37.001 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-2) is shutdown in 0.021 seconds
+18:01:37.005 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:37.005 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Testing: testFromDirectRestServiceAToMockServiceA()(com.example.adapter.SimpleMockTest)
+18:01:37.005 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:37.006 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - setUp test
+18:01:37.007 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Setting up management with factory: org.apache.camel.management.JmxManagementStrategyFactory@7a1f69e2
+18:01:37.010 [Test worker] DEBUG org.apache.camel.impl.engine.PropertiesComponentFactoryResolver - Found PropertiesComponent: org.apache.camel.component.properties.PropertiesComponent via: META-INF/services/org/apache/camel/properties-component-factory
+18:01:37.012 [Test worker] DEBUG org.apache.camel.impl.engine.PropertiesComponentFactoryResolver - Detected and using PropertiesComponent: org.apache.camel.component.properties.PropertiesComponent@63185aac
+18:01:37.014 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - Using created route builder: Routes: []
+18:01:37.014 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Adding routes from builder: Routes: []
+18:01:37.015 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-3) is starting
+18:01:37.016 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ClassResolver=org.apache.camel.impl.engine.DefaultClassResolver@4c404335, PackageScanClassResolver=org.apache.camel.impl.engine.DefaultPackageScanClassResolver@6dacbd2b, ApplicationContextClassLoader=null, RouteController=org.apache.camel.impl.engine.DefaultRouteController@44364c05
+18:01:37.017 [Test worker] INFO org.apache.camel.management.JmxManagementStrategy - JMX is enabled
+18:01:37.017 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Starting JMX agent on server: com.sun.jmx.mbeanserver.JmxMBeanServer@6a615e7e
+18:01:37.022 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=context,name="camel-3"
+18:01:37.022 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@37f1875f
+18:01:37.022 [Test worker] DEBUG org.apache.camel.management.JmxManagementLifecycleStrategy - Registering 5 pre registered services
+18:01:37.024 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultShutdownStrategy
+18:01:37.027 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=PropertiesComponent
+18:01:37.028 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultRouteController
+18:01:37.030 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultBeanIntrospection
+18:01:37.032 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=health,name="camel-3"
+18:01:37.033 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=routecontrollers,name="camel-3"
+18:01:37.036 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultTypeConverter
+18:01:37.037 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jackson/3.0.0/cd0a7996e4b735f77d933755024f94ae75f6af86/camel-jackson-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.037 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-spring/3.0.0/b878c8e2f9f8bdec21ff2607b87bdab00c7c20ce/camel-spring-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.039 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-http-common/3.0.0/c7096f39a452ef9b52a172f4ff931740da937f6/camel-http-common-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.039 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-file/3.0.0/6b809fc35a373b2431b4ae87be25a1e51d084fa3/camel-file-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.040 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-base/3.0.0/a1624a09a9db15d29a71fcaa0cacb6271cafaf49/camel-base-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.041 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-jaxp/3.0.0/a34faa02e4911251ed82a3f7053db1513267de4e/camel-jaxp-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.042 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-attachments/3.0.0/d7330d531ad3ff91f77c349aeccca0a5b2b014dc/camel-attachments-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.045 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Loading file META-INF/services/org/apache/camel/TypeConverterLoader to retrieve list of type converters, from url: jar:file:/C:/Users/solen/IdeaProjects/gradle/caches/modules-2/files-2.1/org.apache.camel/camel-support/3.0.0/4120bbd480d434989bbae67b37f5b84327a10e57/camel-support-3.0.0.jar!/META-INF/services/org/apache/camel/TypeConverterLoader
+18:01:37.045 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.component.jackson.converter.JacksonTypeConvertersLoader
+18:01:37.046 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.component.jackson.converter.JacksonTypeConvertersLoader loading converters
+18:01:37.046 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.spring.converter.ResourceConverterLoader
+18:01:37.046 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.spring.converter.ResourceConverterLoader loading converters
+18:01:37.046 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.http.common.HttpConverterLoader
+18:01:37.046 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.http.common.HttpConverterLoader loading converters
+18:01:37.046 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.component.file.GenericFileConverterLoader
+18:01:37.055 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.component.file.GenericFileConverterLoader loading converters
+18:01:37.055 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.CamelConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.CamelConverterLoader loading converters
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.CollectionConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.CollectionConverterLoader loading converters
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.DateTimeConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.DateTimeConverterLoader loading converters
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.DurationConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.DurationConverterLoader loading converters
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.IOConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.IOConverterLoader loading converters
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.NIOConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.NIOConverterLoader loading converters
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.ObjectConverterLoader
+18:01:37.056 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.ObjectConverterLoader loading converters
+18:01:37.071 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.SQLConverterLoader
+18:01:37.082 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.SQLConverterLoader loading converters
+18:01:37.082 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.TimePatternConverterLoader
+18:01:37.083 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.TimePatternConverterLoader loading converters
+18:01:37.083 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.impl.converter.UriTypeConverterLoader
+18:01:37.083 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.impl.converter.UriTypeConverterLoader loading converters
+18:01:37.083 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.DomConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.DomConverterLoader loading converters
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.StaxConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.StaxConverterLoader loading converters
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.StreamSourceConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.StreamSourceConverterLoader loading converters
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.jaxp.XmlConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.jaxp.XmlConverterLoader loading converters
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.util.xml.StreamSourceConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.util.xml.StreamSourceConverterLoader loading converters
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.attachment.AttachmentConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.attachment.AttachmentConverterLoader loading converters
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - Resolving TypeConverterLoader: org.apache.camel.converter.stream.StreamCacheConverterLoader
+18:01:37.087 [Test worker] DEBUG org.apache.camel.impl.converter.DefaultTypeConverter - TypeConverterLoader: org.apache.camel.converter.stream.StreamCacheConverterLoader loading converters
+18:01:37.089 [Test worker] DEBUG org.apache.camel.impl.converter.AnnotationTypeConverterLoader - No package names found to be used for classpath scanning for annotated type converters.
+18:01:37.092 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultExecutorServiceManager
+18:01:37.096 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultInflightRepository
+18:01:37.103 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultAsyncProcessorAwaitManager
+18:01:37.105 [Test worker] DEBUG org.apache.camel.impl.engine.RestRegistryFactoryResolver - Found RestRegistryFactory: org.apache.camel.component.rest.DefaultRestRegistryFactory via: META-INF/services/org/apache/camel/rest-registry-factory
+18:01:37.106 [Test worker] DEBUG org.apache.camel.impl.engine.RestRegistryFactoryResolver - Detected and using RestRegistryFactory: org.apache.camel.component.rest.DefaultRestRegistryFactory@78d1253c
+18:01:37.108 [Test worker] DEBUG org.apache.camel.impl.engine.ReactiveExecutorResolver - Creating default ReactiveExecutor
+18:01:37.113 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultReactiveExecutor
+18:01:37.113 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Language with name simple in registry. Found: null
+18:01:37.114 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Language with name simple-language in registry. Found: null
+18:01:37.117 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultRuntimeCamelCatalog
+18:01:37.118 [Test worker] DEBUG org.apache.camel.impl.engine.BeanProxyFactoryResolver - Found BeanProxyFactory: org.apache.camel.component.bean.DefaultBeanProxyFactory via: META-INF/services/org/apache/camel/bean-proxy-factory
+18:01:37.119 [Test worker] DEBUG org.apache.camel.impl.engine.BeanProxyFactoryResolver - Detected and using BeanProxyFactory: org.apache.camel.component.bean.DefaultBeanProxyFactory@5b1fd556
+18:01:37.137 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultEndpointRegistry
+18:01:37.143 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultTransformerRegistry
+18:01:37.151 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultValidatorRegistry
+18:01:37.152 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.engine.DefaultComponentResolver@6e4a90a9 to resolve component with name: direct
+18:01:37.153 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name direct in registry. Found: null
+18:01:37.153 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name direct-component in registry. Found: null
+18:01:37.155 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultComponentResolver - Found component: direct via type: org.apache.camel.component.direct.DirectComponent via: META-INF/services/org/apache/camel/component/direct
+18:01:37.158 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=components,name="direct"
+18:01:37.160 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Discovered component property configurer: direct -> org.apache.camel.component.direct.DirectComponentConfigurer@26b9c778
+18:01:37.165 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Discovered endpoint property configurer: direct -> org.apache.camel.component.direct.DirectEndpointConfigurer@712d8240
+18:01:37.166 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://restServiceA], path=[restServiceA]
+18:01:37.167 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://restServiceA converted to endpoint: direct://restServiceA by component: org.apache.camel.component.direct.DirectComponent@1947191a
+18:01:37.172 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="direct://restServiceA"
+18:01:37.176 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ComponentResolver: org.apache.camel.impl.engine.DefaultComponentResolver@6e4a90a9 to resolve component with name: mock
+18:01:37.176 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name mock in registry. Found: null
+18:01:37.176 [Test worker] DEBUG org.apache.camel.support.ResolverHelper - Lookup Component with name mock-component in registry. Found: null
+18:01:37.177 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultComponentResolver - Found component: mock via type: org.apache.camel.component.mock.MockComponent via: META-INF/services/org/apache/camel/component/mock
+18:01:37.178 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=components,name="mock"
+18:01:37.179 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Discovered component property configurer: mock -> org.apache.camel.component.mock.MockComponentConfigurer@4fb6d803
+18:01:37.181 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Discovered endpoint property configurer: mock -> org.apache.camel.component.mock.MockEndpointConfigurer@41dcf992
+18:01:37.181 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://serviceA], path=[serviceA]
+18:01:37.181 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://serviceA converted to endpoint: mock://serviceA by component: org.apache.camel.component.mock.MockComponent@3853576a
+18:01:37.183 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="mock://serviceA"
+18:01:37.185 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:serviceA]'
+18:01:37.190 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultMessageHistoryFactory
+18:01:37.206 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+18:01:37.207 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://serviceA], path=[serviceA]
+18:01:37.208 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://serviceA converted to endpoint: direct://serviceA by component: org.apache.camel.component.direct.DirectComponent@1947191a
+18:01:37.209 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="direct://serviceA"
+18:01:37.212 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://weatherService], path=[weatherService]
+18:01:37.212 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://weatherService converted to endpoint: mock://weatherService by component: org.apache.camel.component.mock.MockComponent@3853576a
+18:01:37.213 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="mock://weatherService"
+18:01:37.213 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:weatherService]'
+18:01:37.214 [Test worker] DEBUG org.apache.camel.component.direct.DirectComponent - Creating endpoint uri=[direct://weatherService], path=[weatherService]
+18:01:37.215 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - direct://weatherService converted to endpoint: direct://weatherService by component: org.apache.camel.component.direct.DirectComponent@1947191a
+18:01:37.216 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="direct://weatherService"
+18:01:37.219 [Test worker] DEBUG org.apache.camel.component.mock.MockComponent - Creating endpoint uri=[mock://serviceB], path=[serviceB]
+18:01:37.219 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - mock://serviceB converted to endpoint: mock://serviceB by component: org.apache.camel.component.mock.MockComponent@3853576a
+18:01:37.220 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="mock://serviceB"
+18:01:37.221 [Test worker] DEBUG org.apache.camel.processor.channel.DefaultChannel - Initialize channel for target: 'To[mock:serviceB]'
+18:01:37.221 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+18:01:37.223 [Test worker] DEBUG org.apache.camel.impl.engine.HeadersMapFactoryResolver - Creating default HeadersMapFactory
+18:01:37.223 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using HeadersMapFactory: org.apache.camel.impl.engine.DefaultHeadersMapFactory@11d6ccef
+18:01:37.223 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Using ReactiveExecutor: org.apache.camel.impl.engine.DefaultReactiveExecutor@f86ae19
+18:01:37.223 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route7 having autoStartup=true
+18:01:37.223 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route7
+18:01:37.223 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route7 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:37.225 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=producers,name=Producer(0x7a283205)
+18:01:37.226 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://serviceA]
+18:01:37.226 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route7 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:37.226 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route7 -> sendTo(mock://serviceA)
+18:01:37.229 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=processors,name="to7"
+18:01:37.229 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route7 -> Channel[sendTo(mock://serviceA)]
+18:01:37.236 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=routes,name="route7"
+18:01:37.236 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@ee1d3f5
+18:01:37.237 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route8 having autoStartup=true
+18:01:37.237 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route8
+18:01:37.237 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route8 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:37.239 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=producers,name=Producer(0x718fdf5b)
+18:01:37.240 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://weatherService]
+18:01:37.240 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route8 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:37.240 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route8 -> sendTo(mock://weatherService)
+18:01:37.243 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=processors,name="to8"
+18:01:37.243 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route8 -> Channel[sendTo(mock://weatherService)]
+18:01:37.248 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=routes,name="route8"
+18:01:37.248 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@2d697332
+18:01:37.249 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Warming up route id: route9 having autoStartup=true
+18:01:37.249 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting services on route: route9
+18:01:37.250 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route9 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:37.253 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=producers,name=Producer(0x7816d2b5)
+18:01:37.253 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Starting producer: Producer[mock://serviceB]
+18:01:37.253 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route9 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:37.253 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route9 -> sendTo(mock://serviceB)
+18:01:37.256 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=processors,name="to9"
+18:01:37.256 [Test worker] DEBUG org.apache.camel.impl.RouteService - Starting child service on route: route9 -> Channel[sendTo(mock://serviceB)]
+18:01:37.259 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=routes,name="route9"
+18:01:37.260 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Added TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@acea73a
+18:01:37.260 [Test worker] DEBUG org.apache.camel.management.JmxManagementLifecycleStrategy - Load performance statistics disabled
+18:01:37.260 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route7 >>> EventDrivenConsumerRoute[direct://restServiceA -> Pipeline[[Channel[sendTo(mock://serviceA)]]]]
+18:01:37.260 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1000) on route: route7
+18:01:37.268 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=consumers,name=DirectConsumer(0x91f08fb)
+18:01:37.268 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://restServiceA]
+18:01:37.269 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://restServiceA]
+18:01:37.269 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route7 started and consuming from: direct://restServiceA
+18:01:37.269 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route8 >>> EventDrivenConsumerRoute[direct://serviceA -> Pipeline[[Channel[sendTo(mock://weatherService)]]]]
+18:01:37.270 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1001) on route: route8
+18:01:37.272 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=consumers,name=DirectConsumer(0x6bda1534)
+18:01:37.272 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://serviceA]
+18:01:37.273 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://serviceA]
+18:01:37.273 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route8 started and consuming from: direct://serviceA
+18:01:37.273 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Route: route9 >>> EventDrivenConsumerRoute[direct://weatherService -> Pipeline[[Channel[sendTo(mock://serviceB)]]]]
+18:01:37.274 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Starting consumer (order: 1002) on route: route9
+18:01:37.276 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Registered MBean with ObjectName: org.apache.camel:context=camel-3,type=consumers,name=DirectConsumer(0x1d5f18db)
+18:01:37.276 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Init consumer: Consumer[direct://weatherService]
+18:01:37.276 [Test worker] DEBUG org.apache.camel.component.direct.DirectConsumer - Starting consumer: Consumer[direct://weatherService]
+18:01:37.291 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Route: route9 started and consuming from: direct://weatherService
+18:01:37.292 [Test worker] DEBUG org.apache.camel.impl.DefaultCamelContext - Clearing BeanIntrospection cache with 65 objects using during starting Camel
+18:01:37.292 [Test worker] DEBUG org.apache.camel.support.IntrospectionSupport - Clearing cache[size=65, hits=93, misses=65, evicted=0]
+18:01:37.302 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Total 3 routes, of which 3 are started
+18:01:37.303 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-3) started in 0.288 seconds
+18:01:37.306 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - Routing Rules are: [EventDrivenConsumerRoute[direct://restServiceA -> Pipeline[[Channel[sendTo(mock://serviceA)]]]], EventDrivenConsumerRoute[direct://serviceA -> Pipeline[[Channel[sendTo(mock://weatherService)]]]], EventDrivenConsumerRoute[direct://weatherService -> Pipeline[[Channel[sendTo(mock://serviceB)]]]]]
+18:01:37.314 [Test worker] DEBUG org.apache.camel.component.direct.DirectProducer - Starting producer: Producer[direct://restServiceA]
+18:01:37.314 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultProducerCache - >>>> direct://restServiceA Exchange[]
+18:01:37.315 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Step[ID-DESKTOP-JDBUIFM-1627052496590-2-1,DefaultErrorHandler[sendTo(mock://serviceA)]]
+18:01:37.316 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: CamelInternalProcessor - UnitOfWork - afterProcess - DefaultErrorHandler[sendTo(mock://serviceA)] - ID-DESKTOP-JDBUIFM-1627052496590-2-1
+18:01:37.316 [Test worker] DEBUG org.apache.camel.processor.SendProcessor - >>>> mock://serviceA Exchange[ID-DESKTOP-JDBUIFM-1627052496590-2-1]
+18:01:37.319 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint - mock://serviceA >>>> 0 : Exchange[ID-DESKTOP-JDBUIFM-1627052496590-2-1] with body: { 
+ "msg": "Привет", 
+ "lng": "ru", 
+ "coordinates": { 
+ "latitude": "54.35", 
+ "longitude": "52.52" 
+ } 
+ }
+18:01:37.322 [Test worker] DEBUG org.apache.camel.component.mock.MockEndpoint - Running assertOnIndex(0) on task: org.apache.camel.component.mock.MockEndpoint$6@66a9f951
+18:01:37.322 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.CamelInternalProcessor$$Lambda$887/0x0000000800eee170@708d984d]
+18:01:37.323 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.Pipeline$$Lambda$889/0x0000000800eef0c8@15fcb2d0]
+18:01:37.323 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Step[ID-DESKTOP-JDBUIFM-1627052496590-2-1,Pipeline[[Channel[sendTo(mock://serviceA)]]]]
+18:01:37.325 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.CamelInternalProcessor$$Lambda$887/0x0000000800eee170@58559a25]
+18:01:37.326 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.processor.SharedCamelInternalProcessor$InternalCallback@711f830f]
+18:01:37.326 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultReactiveExecutor - Queuing reactive work: Callback[org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager$$Lambda$884/0x0000000800eece60@6dcc3291]
+18:01:37.327 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://serviceA is satisfied
+18:01:37.327 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://weatherService is satisfied
+18:01:37.327 [Test worker] INFO org.apache.camel.component.mock.MockEndpoint - Asserting: mock://serviceB is satisfied
+18:01:37.329 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:37.331 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Testing done: testFromDirectRestServiceAToMockServiceA()(com.example.adapter.SimpleMockTest)
+18:01:37.332 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - Took: 0.017 seconds (17 millis)
+18:01:37.332 [Test worker] INFO org.apache.camel.test.junit5.CamelTestSupport - ********************************************************************************
+18:01:37.333 [Test worker] DEBUG org.apache.camel.test.junit5.CamelTestSupport - tearDown()
+18:01:37.333 [Test worker] DEBUG org.apache.camel.component.direct.DirectProducer - Stopping producer: Producer[direct://restServiceA]
+18:01:37.336 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-3) is shutting down
+18:01:37.337 [Test worker] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 10 seconds)
+18:01:37.362 [Test worker] DEBUG org.apache.camel.impl.engine.BaseExecutorServiceManager - Created new ThreadPool for source: org.apache.camel.impl.engine.DefaultShutdownStrategy@69a652e7 with name: ShutdownTask. -> org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@1dd677ca[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0][ShutdownTask]
+18:01:37.365 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - There are 3 routes to shutdown
+18:01:37.366 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route9 suspension deferred.
+18:01:37.366 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route8 suspension deferred.
+18:01:37.366 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route7 suspension deferred.
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route9 preparing to shutdown complete.
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route8 preparing to shutdown complete.
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route7 preparing to shutdown complete.
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://weatherService]
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://serviceB]
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=producers,name=Producer(0x7816d2b5)
+18:01:37.369 [Camel (camel-3) thread #3 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route9 shutdown complete, was consuming from: direct://weatherService
+18:01:37.370 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://serviceA]
+18:01:37.370 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://weatherService]
+18:01:37.370 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=producers,name=Producer(0x718fdf5b)
+18:01:37.370 [Camel (camel-3) thread #3 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route8 shutdown complete, was consuming from: direct://serviceA
+18:01:37.370 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.component.direct.DirectConsumer - Stopping consumer: Consumer[direct://restServiceA]
+18:01:37.371 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.component.mock.MockEndpoint$1 - Stopping producer: Producer[mock://serviceA]
+18:01:37.372 [Camel (camel-3) thread #3 - ShutdownTask] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=producers,name=Producer(0x7a283205)
+18:01:37.373 [Camel (camel-3) thread #3 - ShutdownTask] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Route: route7 shutdown complete, was consuming from: direct://restServiceA
+18:01:37.374 [Test worker] INFO org.apache.camel.impl.engine.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+18:01:37.375 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager - Shutting down with no inflight threads.
+18:01:37.377 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@acea73a
+18:01:37.377 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=routes,name="route9"
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route9
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route9 -> Consumer[direct://weatherService]
+18:01:37.377 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=consumers,name=DirectConsumer(0x1d5f18db)
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route9 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route9 -> Pipeline[[Channel[sendTo(mock://serviceB)]]]
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route9 -> sendTo(mock://serviceB)
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route9 -> Channel[sendTo(mock://serviceB)]
+18:01:37.377 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route9
+18:01:37.378 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@2d697332
+18:01:37.378 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=routes,name="route8"
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route8
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route8 -> Consumer[direct://serviceA]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=consumers,name=DirectConsumer(0x6bda1534)
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route8 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route8 -> Pipeline[[Channel[sendTo(mock://weatherService)]]]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route8 -> sendTo(mock://weatherService)
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route8 -> Channel[sendTo(mock://weatherService)]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route8
+18:01:37.378 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedSuspendableRoute@ee1d3f5
+18:01:37.378 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=routes,name="route7"
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Stopping services on route: route7
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route7 -> Consumer[direct://restServiceA]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=consumers,name=DirectConsumer(0x91f08fb)
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route7 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route7 -> Pipeline[[Channel[sendTo(mock://serviceA)]]]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route7 -> sendTo(mock://serviceA)
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down child service on route: route7 -> Channel[sendTo(mock://serviceA)]
+18:01:37.378 [Test worker] DEBUG org.apache.camel.impl.RouteService - Shutting down services on route: route7
+18:01:37.379 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=routecontrollers,name="camel-3"
+18:01:37.379 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=health,name="camel-3"
+18:01:37.379 [Test worker] DEBUG org.apache.camel.support.TimerListenerManager - Removed TimerListener: org.apache.camel.management.mbean.ManagedCamelContext@68f85d89
+18:01:37.379 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=context,name="camel-3"
+18:01:37.379 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultInflightRepository - Shutting down with no inflight exchanges.
+18:01:37.379 [Test worker] DEBUG org.apache.camel.support.IntrospectionSupport - Clearing cache[size=0, hits=0, misses=0, evicted=0]
+18:01:37.379 [Test worker] DEBUG org.apache.camel.impl.engine.DefaultBeanIntrospection - BeanIntrospection invoked: 158 times
+18:01:37.379 [Test worker] DEBUG org.apache.camel.impl.engine.BaseExecutorServiceManager - Forcing shutdown of ExecutorService: org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@1dd677ca[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0][ShutdownTask]
+18:01:37.379 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultRuntimeCamelCatalog
+18:01:37.379 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultBeanIntrospection
+18:01:37.379 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="direct://restServiceA"
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultShutdownStrategy
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultValidatorRegistry
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="direct://serviceA"
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=components,name="mock"
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultTypeConverter
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=processors,name="to9"
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultExecutorServiceManager
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="mock://serviceA"
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultInflightRepository
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultTransformerRegistry
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultRouteController
+18:01:37.380 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultMessageHistoryFactory
+18:01:37.381 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=components,name="direct"
+18:01:37.381 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=processors,name="to8"
+18:01:37.381 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="direct://weatherService"
+18:01:37.381 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=processors,name="to7"
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultReactiveExecutor
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=PropertiesComponent
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="mock://weatherService"
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=errorhandlers,name="DefaultErrorHandlerBuilder(ref:CamelDefaultErrorHandlerBuilder)"
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultEndpointRegistry
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=endpoints,name="mock://serviceB"
+18:01:37.382 [Test worker] DEBUG org.apache.camel.management.DefaultManagementAgent - Unregistered MBean with ObjectName: org.apache.camel:context=camel-3,type=services,name=DefaultAsyncProcessorAwaitManager
+18:01:37.382 [Test worker] DEBUG org.apache.camel.support.management.MBeanInfoAssembler - Clearing cache[size=23, hits=21, misses=23, evicted=0]
+18:01:37.383 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-3) uptime 0.367 seconds
+18:01:37.385 [Test worker] INFO org.apache.camel.impl.DefaultCamelContext - Apache Camel 3.0.0 (CamelContext: camel-3) is shutdown in 0.047 seconds
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
